@@ -11,7 +11,6 @@
       content="Landing page for the Buy-A-Book electronic store."
     />
     <link rel="stylesheet" href="/styles/reset.css" />
-    <link rel="stylesheet" href="/styles/bootstrap.css" />
     <link rel="stylesheet" href="/styles/index.css" />
     <script
       src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -21,7 +20,7 @@
   </head>
   <body>
     <header>
-      <button id="nav" type="menu" class="btn btn-secondary">Nav</button>
+      <button id="nav" type="menu" class="btn">Nav</button>
       <div id="header-content">
         <p class="title" id="main-title">
           Welcome <b id="user"></b> to Buy-A-Book!
@@ -29,40 +28,38 @@
         <p class="title" id="sub-title">The Online Market for Books</p>
       </div>
       <div id="buttons">
-        <button id="signin" type="button" class="btn btn-secondary">
+        <button id="signin" type="button" class="btn">
           Sign In
         </button>
-        <button id="signup" type="button" class="btn btn-secondary">
+        <button id="signup" type="button" class="btn">
           Sign Up
         </button>
-        <button id="cart" type="button" class="btn btn-secondary">Cart</button>
+        <button id="cart" type="button" class="btn">Cart</button>
       </div>
     </header>
-    <aside>
-        
-    </aside>
-    <div class="container">
       <main>
-        <div class="row">
-          <div class="col-md-12">
             <form>
               <div class="form-group">
                 <input
                   id="search-form"
                   name="search-form"
-                  class="form-control"
                   type="search"
                 />
-                <button id="search" type="button" class="btn btn-secondary">
+                <button id="search" type="button" class="btn">
                   Search
                 </button>
               </div>
             </form>
-          </div>
+        <div id="products">
+
         </div>
       </main>
     </div>
-    <footer></footer>
+    <footer class="container">
+        <div>
+            
+        </div>
+    </footer>
   </body>
   <script src="/scripts/index.js"></script>
 </html>
