@@ -3,26 +3,29 @@ header {
   gap: 15px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, minmax(10px, auto));
-}
-
-#search-bar {
-  grid-column: 1/4;
-  grid-row: 2/3;
-  margin-left: 5%;
-  #search-form {
-    width: 90%;
-  }
-}
-
-#filters {
-  margin-left: 20%;
   position: fixed;
-  .form-control {
-    display: inline-block;
-    margin: 10px 15px 5px 15px;
+  top: 0px;
+  z-index: 1;
+  width: 100%;
+  #search-bar {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    margin-left: 5%;
+    #search-form {
+      width: 90%;
+    }
   }
-}
-
-#products {
-  margin-top: 100%;
+  nav {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    display: none;
+    #filters {
+      padding: 10px;
+      margin-left: 20%;
+      .form-control {
+        display: inline-block;
+        margin: 10px 15px 5px 15px;
+      }
+    }
+  }
 }
