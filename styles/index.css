@@ -1,0 +1,30 @@
+header {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, minmax(10px, auto));
+}
+
+#search-bar {
+  grid-column: 1/4;
+  grid-row: 2/3;
+  margin-left: 5%;
+}
+#search-bar #search-form {
+  width: 90%;
+}
+
+#filters {
+  margin-left: 20%;
+  position: fixed;
+}
+#filters .form-control {
+  display: inline-block;
+  margin: 10px 15px 5px 15px;
+}
+
+#products {
+  margin-top: 100%;
+}
+
+/*# sourceMappingURL=index.css.map */
