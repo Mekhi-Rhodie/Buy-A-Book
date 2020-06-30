@@ -14,6 +14,50 @@ firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 const auth = firebase.auth();
 
+class Book {
+  constructor(title, publisher, author, genre, image, description, pages, pubDate, isbn, price) {
+    this.title = title
+    this.publisher = publisher
+    this.author = author
+    this.genre = genre
+    this.image = image
+    this.description = description
+    this.pages = pages
+    this.pubDate = pubDate
+    this.isbn = isbn
+    this.price = price
+  }
+}
+
 $("#nav").on("click", function () {
   $("nav").toggle(1000)
+})
+
+$("#search").on("click", function () {
+  const searchVal = $("#search-form").val();
+  const URL = `https://www.googleapis.com/books/v1/volumes?q=search ${searchVal}`
+  console.log(URL)
+
+  $.ajax({
+    type: "get",
+    url: URL
+  }).then(function (response) {
+    console.log(response.items)
+    const data = response.items
+    for (let i = 0; i < data.length; i++) {
+      const title = data[i].volumeInfo.title
+      const publisher = data[i].volumeInfo.publisher
+      const author = data[i].volumeInfo.authors
+      const genre = data[i].volumeInfo.categories[0]
+      const image = data[i].volumeInfo.imageLinks.thumbnail
+      const description = data[i].volumeInfo.description
+      const pages = data[i].volumeInfo.pageCount
+      const pubDate = data[i].volumeInfo.publishedDate
+      const isbn = data[i].volumeInfo.industryIdentifiers[0].identifier
+      const price = "$" + data[i].saleInfo.retailPrice
+      let book = new Book(title, publisher, author, genre, image, description, pages, pubDate, isbn, price)
+      console.log(book)
+    }
+  }
+  );
 })
