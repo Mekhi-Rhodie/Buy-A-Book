@@ -7,10 +7,17 @@ header {
   top: 0px;
   z-index: 1;
   width: 100%;
+  padding: 10px;
+  #header-content {
+    text-align: center;
+  }
+  #buttons {
+    margin-left: 50%;
+  }
   #search-bar {
     grid-column: 1/4;
     grid-row: 2/3;
-    margin-left: 5%;
+    margin: 0% 10%;
     #search-form {
       width: 90%;
     }
@@ -21,7 +28,7 @@ header {
     display: none;
     #filters {
       padding: 10px;
-      margin-left: 20%;
+      margin: 0% 15%;
       .form-control {
         display: inline-block;
         margin: 10px 15px 5px 15px;
