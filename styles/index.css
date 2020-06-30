@@ -7,11 +7,18 @@ header {
   top: 0px;
   z-index: 1;
   width: 100%;
+  padding: 10px;
+}
+header #header-content {
+  text-align: center;
+}
+header #buttons {
+  margin-left: 50%;
 }
 header #search-bar {
   grid-column: 1/4;
   grid-row: 2/3;
-  margin-left: 5%;
+  margin: 0% 10%;
 }
 header #search-bar #search-form {
   width: 90%;
@@ -23,7 +30,7 @@ header nav {
 }
 header nav #filters {
   padding: 10px;
-  margin-left: 20%;
+  margin: 0% 15%;
 }
 header nav #filters .form-control {
   display: inline-block;
